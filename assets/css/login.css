@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent {
+    background: linear-gradient(#0e55a1 ,#34ffab );
+    min-height: 100dvh;
+}
+
+.child {
+    background-color: rgb(239, 249, 255);
+    border-radius: 30px;
+    margin: auto auto;
+    padding: 50px;
+}
+
+.button {
+
+ width: 400px;
+ height: 50px;
+ border-radius: 30px;
+
+}
+
+
+

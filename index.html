@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakani</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom shadow-sm" dir="rtl">
+        <div class="container px-4 py-2">
+
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#">
+                <div class="bg-gradient rounded-circle p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                    </svg>
+                </div>
+                سكني
+            </a>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible Content -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+                <!-- Nav links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-1">
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2 active"
+                            style="color:#3b82f6;background:#eff6ff;border-radius:8px;font-weight:500"
+                            href="index.html">
+                            الرئيسية
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2"
+                            style="color:#6b7280;font-weight:500"
+                            href="index.html#price">
+                            الأسعار
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2"
+                            style="color:#6b7280;font-weight:500"
+                            href="index.html#guide">
+                            دليل السكن
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2"
+                            style="color:#6b7280;font-weight:500"
+                            href="index.html#contact">
+                            تواصل معنا
+                        </a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link px-3 py-2"
+                            style="color:#6b7280;font-weight:500"
+                            href="housing.html">
+                             تصفح السكن
+                        </a>
+                    </li>
+                    <li class="nav-item cursor" id="adminPage"> <a class="nav-link px-3 py-2 d-flex align-items-center gap-1" style="color: #6b7280; font-weight: 500;"> 
+                         للملاك </a> </li>
+                </ul>
+
+                <!-- Login button -->
+                <a class="btn btn-primary fw-bold px-4" href="login.html" id="loginBTN">
+                    تسجيل دخول
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- hero section -->
+    <section class="hero-section text-white py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10 text-center">
+                    <h1 class="fw-bold mb-3 fs-2 fs-md-1"> البحث عن سكن طلابي آمن في جميع أنحاء مصر </h1>
+                    <p class="hero-text mb-4 px-3"> بأسعار معقولة، موثوقة، وقريبة من جامعتك <strong>سكني</strong>
+                        يجعل العثور على سكن بسيطًا وموثوقًا </p>
+                    <div class="search-box mx-auto p-3 p-md-4">
+                        <div class="row g-3 mb-3">
+                            <div class="col-12 col-md-6 text-end">
+                                <label class="form-label">المدينة / المحافظة</label>
+                                <select class="form-select fs-6 fs-md-5 w-100" id="city">
+                                <option value="cairo" selected>القاهرة</option>
+                                <option value="giza">الجيزة</option>
+                                <option value="alex">الإسكندرية</option>
+                                <option value="dakahlia">الدقهلية</option>
+                                <option value="rds">البحر الأحمر</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6 text-end">
+                                <label class="form-label"> نوع السكن </label>
+                                <select class="form-select" id="typeofhousing">
+                                    <option value="single" selected>غرفة خاصة</option>
+                                    <option value="shared">غرفة مشتركة</option>
+                                    <option value="apartment">شقة كاملة</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary w-100 py-3 fw-bold" id="search"> البحث عن السكن </button>
+                    </div>
+                    <div class="features d-flex flex-column flex-sm-row justify-content-center gap-3 gap-sm-5 mt-4">
+                        <span class="d-flex align-items-center gap-2 justify-content-center"> آمن <i
+                                class="bi bi-shield-check"></i>
+                        </span>
+                        <span class="d-flex align-items-center gap-2 justify-content-center"> موفر <i
+                                class="bi bi-currency-dollar"></i>
+                        </span>
+                        <span class="d-flex align-items-center gap-2 justify-content-center"> موثوق <i
+                                class="bi bi-check-circle"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- second section -->
+    <section class="price-section py-5" id="price">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="row align-items-center g-4">
+                    <div class="col-12 col-lg-6 text-center text-lg-end">
+                        <div class="text-content">
+                            <h3 class="fw-bold mb-3">اعرف قبل أن تستأجر</h3>
+                            <p class="mb-4"> تحقق من متوسط أسعار سكن الطلاب في المدن المصرية </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6">
+                                <div class="price-card text-center p-4 h-100">
+                                    <h2 class="text-success fw-bold mb-2">3,250</h2>
+                                    <p class="mb-0">متوسط الإسكندرية (جنيه/شهر)</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="price-card text-center p-4 h-100">
+                                    <h2 class="text-primary fw-bold mb-2">4,500</h2>
+                                    <p class="mb-0">متوسط القاهرة (جنيه/شهر)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- third section -->
+    <section class="student-guide py-5" id="guide">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="guide-title fw-bold mb-3">دليل السكن الطلابي</h2>
+                <p class="guide-subtitle px-3"> نصائح ومشورة أساسية للطلاب المصريين الذين يستأجرون لأول مرة </p>
+            </div>
+            <div class="row g-4 text-start">
+                <div class="col-12 col-lg-6">
+                    <div class="guide-card card-danger h-100 p-4">
+                        <div class="icon-wrapper mb-3">
+                            <i class="bi bi-exclamation-triangle-fill"></i>
+                        </div>
+                        <h5 class="mb-3">عمليات احتيال شائعة يجب تجنبها</h5>
+                        <ul class="mb-0">
+                            <li>لا تدفع الإيجار كاملاً مقدماً بدون عقد موقع</li>
+                            <li>احذر من الأسعار المنخفضة بشكل كبير عن متوسط السوق</li>
+                            <li>لا ترسل أموالاً قبل رؤية العقار</li>
+                            <li>تجنب الملاك الذين يضغطون عليك لاتخاذ قرار فوري</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="guide-card card-safe h-100 p-4">
+                        <div class="icon-wrapper mb-3">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h5 class="mb-3">كيف تختار سكناً طلابياً آمناً في مصر</h5>
+                        <ul class="mb-0">
+                            <li>قم بزيارة العقار شخصياً قبل التوقيع على أي عقد</li>
+                            <li>تحقق من سلامة الحي والإضاءة ليلاً</li>
+                            <li>تحقق من هوية المالك ومستندات الملكية</li>
+                            <li>ابحث عن سكن قريب من أمن الجامعة أو شرطة الحرم الجامعي</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="guide-card card-money h-100 p-4">
+                        <div class="icon-wrapper mb-3">
+                            <i class="bi bi-lightbulb-fill"></i>
+                        </div>
+                        <h5 class="mb-3">نصائح لتوفير المال للطلاب</h5>
+                        <ul class="mb-0">
+                            <li>فكر في مشاركة شقة لتقسيم التكاليف</li>
+                            <li>ابحث عن سكن مع المرافق المدرجة في الايجار</li>
+                            <li>اختر المواقع القريبة من وسائل النقل بأسعار معقوله</li>
+                            <li>تفاوض على عقود طويلة الأجل للحصول على أسعار أفضل</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="guide-card card-rights h-100 p-4">
+                        <div class="icon-wrapper mb-3">
+                            <i class="bi bi-file-earmark-text-fill"></i>
+                        </div>
+                        <h5 class="mb-3">حقوقك كمستأجر طالب</h5>
+                        <ul class="mb-0">
+                            <li>لديك الحق في عقد إيجار مكتوب</li>
+                            <li>يجب على الملاك تقديم إيصالات لجميع المدفوعات</li>
+                            <li>يمكنك طلب إصلاحات للمرافق الأساسية</li>
+                            <li>يجب إعادة التأمين عند المغادرة</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">تواصل معنا</h2>
+                <p class="text-muted">هل أنت صاحب سكن؟ أرسل طلبك وسنقوم بالرد عليك في أقرب وقت</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <div class="contact-card p-4 p-md-5 shadow-sm">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6 text-end">
+                                    <label class="form-label fw-bold">الاسم بالكامل</label>
+                                    <input type="text" class="form-control" placeholder="أدخل اسمك">
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <label class="form-label fw-bold">رقم الهاتف</label>
+                                    <input type="tel" class="form-control" placeholder="01xxxxxxxxx">
+                                </div>
+                                <div class="col-12 text-end">
+                                    <label class="form-label fw-bold">البريد الإلكتروني</label>
+                                    <input type="email" class="form-control" placeholder="email@example.com">
+                                </div>
+                                <div class="col-12 text-end">
+                                    <label class="form-label fw-bold">نوع الخدمة المطلوبة</label>
+                                    <select class="form-select">
+                                        <option selected disabled>اختر الإجراء...</option>
+                                        <option>إضافة إعلان جديد</option>
+                                        <option>تعديل إعلان موجود</option>
+                                        <option>حذف إعلان</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 text-end">
+                                    <label class="form-label fw-bold">وصف الطلب</label>
+                                    <textarea class="form-control" rows="4"
+                                        placeholder="اكتب تفاصيل طلبك هنا..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="p-3 mb-3 bg-light rounded text-center border">
+                                        <p class="mb-0 text-primary fw-bold small">
+                                            <i class="bi bi-info-circle-fill me-1"></i>
+                                            ملاحظة: يستغرق الرد على الطلب من يومين إلى 5 أيام عمل.
+                                        </p>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100 py-3 fw-bold shadow-sm">إرسال
+                                        الطلب</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- last section -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="contact text-center px-3">
+                <h2 class="txt fw-bold mb-3 fs-3 fs-md-2">هل أنت مستعد للعثور على سكن طلابي مثالي؟</h2>
+                <p class="txt2 mb-4">انضم إلى آلاف الطلاب المصريين الذين وجدوا سكناً آمناً وبأسعار معقولة</p>
+                <a href="housing.html" class="btn btn-dark fw-bolder text-white border-3 px-5 py-3">ابحث عن سكن</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>

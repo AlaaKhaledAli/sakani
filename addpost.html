@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/addpost.css">
+    <title>Document</title>
+</head>
+
+<body dir="rtl" class="mt-4">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom shadow-sm" dir="rtl">
+        <div class="container px-4 py-2">
+
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#">
+                <div class="bg-gradient rounded-circle p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                    </svg>
+                </div>
+                سكني
+            </a>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible Content -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+                <!-- Nav links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-1">
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2 active"
+                            style="color:#3b82f6;background:#eff6ff;border-radius:8px;font-weight:500"
+                            href="index.html">
+                            الرئيسية
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2"
+                            style="color:#6b7280;font-weight:500"
+                            href="index.html#price">
+                            الأسعار
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2"
+                            style="color:#6b7280;font-weight:500"
+                            href="index.html#guide">
+                            دليل السكن
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2"
+                            style="color:#6b7280;font-weight:500"
+                            href="index.html#contact">
+                            تواصل معنا
+                        </a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link px-3 py-2"
+                            style="color:#6b7280;font-weight:500"
+                            href="housing.html">
+                             تصفح السكن
+                        </a>
+                    </li>
+                    <li class="nav-item cursor" id="adminPage"> <a class="nav-link px-3 py-2 d-flex align-items-center gap-1" style="color: #6b7280; font-weight: 500;"> 
+                         للملاك </a> </li>
+                </ul>
+
+                <!-- Login button -->
+                <a class="btn btn-primary fw-bold px-4" href="login.html" id="loginBTN">
+                    تسجيل دخول
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <section></section>
+
+    <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-3 gap-2">
+            <h2>اعلاناتي</h2>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse"
+                aria-expanded="false" aria-controls="collapse"> اضافة اعلان جديد </button>
+        </div>
+
+        <div class="card shadow-sm border-0 mt-4 collapse" id="collapse">
+            <div class="card-body p-4 Main">
+                <span class="mb-4 fs-5 d-block">إضافة إعلان جديد</span>
+                <form id="userform">
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                            <label class="form-label">عنوان الاعلان</label>
+                            <input class="form-control" placeholder="مثال: غرفة قرب الجامعة" type="text" id="Title">
+                            <p id="TitleError"></p>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label class="form-label">المحافظه</label>
+                            <select id="city" class="form-select">
+                                <option value="cairo">القاهرة</option>
+                                <option value="giza">الجيزة</option>
+                                <option value="alex">الإسكندرية</option>
+                                <option value="dakahlia">الدقهلية</option>
+                                <option value="rds">البحر الأحمر</option>
+                                <option value="beheira">البحيرة</option>
+                                <option value="fayoum">الفيوم</option>
+                                <option value="gharbiya">الغربية</option>
+                                <option value="ismailia">الإسماعيلية</option>
+                                <option value="menofia">المنوفية</option>
+                                <option value="minya">المنيا</option>
+                                <option value="qaliubiya">القليوبية</option>
+                                <option value="wadi">الوادي الجديد</option>
+                                <option value="suez">السويس</option>
+                                <option value="aswan">أسوان</option>
+                                <option value="assiut">أسيوط</option>
+                                <option value="bns">بني سويف</option>
+                                <option value="psd">بورسعيد</option>
+                                <option value="damietta">دمياط</option>
+                                <option value="sharkia">الشرقية</option>
+                                <option value="ssina">جنوب سيناء</option>
+                                <option value="kfs">كفر الشيخ</option>
+                                <option value="matrouh">مطروح</option>
+                                <option value="luxor">الأقصر</option>
+                                <option value="qena">قنا</option>
+                                <option value="nsina">شمال سيناء</option>
+                                <option value="sohag">سوهاج</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mt-2">
+                        <div class="col-12 col-md-6">
+                            <label class="form-label">السعر الشهري (الجنيه)</label>
+                            <input class="form-control" placeholder="1000" type="number" id="price">
+                            <p id="PriceError"></p>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label class="form-label">نوع السكن</label>
+                            <select class="form-select" id="typeofhosing">
+                                <option value="single">غرفة خاصه</option>
+                                <option value="shared">غرفة مشتركه</option>
+                                <option value="apartment">شقه كامله</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mt-2">
+                        <div class="col-12 col-md-6">
+                            <label class="form-label">رقم المالك (رقم مصري)</label>
+                            <input class="form-control" placeholder="مثال : 01005544332" type="tel" id="ownernumber">
+                            <p id="Perror"></p>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label class="form-label">اسم المالك</label>
+                            <input class="form-control" placeholder="مثال : خالد " type="text" id="owner">
+                            <p id="OwnerError"></p>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <label class="form-label">الوصف</label>
+                        <textarea placeholder="اكتب وصفا تفصيليا للسكن..." class="form-control" id="description"
+                            rows="4"></textarea>
+                        <p id="Derror"></p>
+                    </div>
+
+                    <div class="mt-3 d-flex flex-column flex-md-row gap-2">
+                        <button class="btn btn-primary" id="submit" type="submit">
+                            <span class="mx-2">نشر الاعلان</span>
+                        </button>
+                        <button class="btn btn-secondary ms-md-2" type="reset" id="delet">
+                            <span class="mx-2">الغاء</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12" id="card">
+
+            </div>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="assets/js/validation.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
