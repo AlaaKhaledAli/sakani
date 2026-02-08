@@ -4,7 +4,7 @@ const password = document.getElementById('pass');
 const button = document.getElementById('submit');
 
 const Gmail = 'malekdiaa@gmail.com';
-const pass = '1';
+const pass = 'KQ9!$Z@7x2MP#L';
 console.log(button);
 
 button.addEventListener('click', function (e) {
