@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Check if user is logged in
     if (!localStorage.getItem("loggedIn")) {
         // redirect to login if not logged in
-        window.location.replace("login.html");
+        window.location.href=("login.html");
         return; // stop further execution
     }
 });

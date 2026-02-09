@@ -174,7 +174,7 @@ function postfilteration(city, minprice, maxprice, typeofhosing) {
   
   const houses= localStorage.getItem('dataObj') ? JSON.parse(localStorage.getItem('dataObj')) : [];
   const filteredhoues = houses
-    .filter(house => !city ||house.city === city)
+    .filter(house => house.city === city)
     .filter(house => !minprice || !maxprice || house.price >=  +minprice && house.price <= +maxprice)
     .filter(house => typeofhosing === "all" ||house.typeofhosing === typeofhosing)    
     console.log(filteredhoues);

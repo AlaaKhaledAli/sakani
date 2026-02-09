@@ -1,33 +1,4 @@
 
-const loginBTN = document.getElementById('loginBTN');
-const adminPage = document.getElementById('adminPage');
-
-adminPage.onclick=isLoggedin
-
-function isLoggedin(){
-
-  localStorage.getItem("loggedIn")?window.location.href='addpost.html':window.location.href='login.html';
-
-}
-
-localStorage.getItem("loggedIn")?loginBTN.innerText="تسجيل خروج":loginBTN.innerText="تسجيل دخول";
-
-loginBTN.onclick = checkLoginStatus;
-
-function checkLoginStatus() { 
-
-  if(loginBTN.innerText==="تسجيل خروج"){
-
-    localStorage.removeItem("loggedIn")
-
-loginBTN.innerText="تسجيل دخول"
-
-  }else{
-
-  window.location.href = "login.html";
-
-  }
-}
 
 function createCard(post, index) {
     const card = document.createElement('div');

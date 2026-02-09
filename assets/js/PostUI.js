@@ -1,33 +1,4 @@
 
-const loginBTN = document.getElementById('loginBTN');
-const adminPage = document.getElementById('adminPage');
-
-adminPage.onclick=isLoggedin
-
-function isLoggedin(){
-
-  localStorage.getItem("loggedIn")?window.location.href='addpost.html':window.location.href='login.html';
-
-}
-
-localStorage.getItem("loggedIn")?loginBTN.innerText="تسجيل خروج":loginBTN.innerText="تسجيل دخول";
-
-loginBTN.onclick = checkLoginStatus;
-
-function checkLoginStatus() { 
-
-  if(loginBTN.innerText==="تسجيل خروج"){
-
-    localStorage.removeItem("loggedIn")
-
-loginBTN.innerText="تسجيل دخول"
-
-  }else{
-
-  window.location.href = "login.html";
-
-  }
-}
 let posts;
 if (localStorage.dataObj != null) {
   posts = JSON.parse(localStorage.dataObj);
@@ -79,7 +50,7 @@ postContainer.innerHTML = `
                 <div>
                     <h1 class="apartment-title">${CurrentPost.title}<span class="star">⭐</span></h1>
                     <div class="location-info">
-                        <span>0.5 كم بعد عن جامعة القاهره</span>
+                        <span>${CurrentPost.city}</span>
                     </div>
                 </div>
                 <div class="apartment-type mt-2 mt-md-0">
@@ -88,16 +59,6 @@ postContainer.innerHTML = `
                 </div>
             </div>
 
-            <div class="rating-section mt-3">
-                <div class="distance-info">
-                    <span>0.5 كم من جامعة القاهره</span>
-                </div>
-                <div class="rating-stars">
-                    <span class="rating-count">(15 تقييم)</span>
-                    <span class="rating-number">4.3</span>
-                    <span class="star">⭐</span>
-                </div>
-            </div>
 
             <div class="card-body-section mt-3">
                 <h2 class="section-title">الوصف</h2>
@@ -150,6 +111,8 @@ function ownerChat(){
 }
 
 function typeOfHousing() {
+    console.log(CurrentPost.typeofhosing);
+    
     if (CurrentPost.typeofhosing === "apartment") return "شقة كاملة";
     if (CurrentPost.typeofhosing === "single") return "غرفة خاصة";
     if (CurrentPost.typeofhosing === "shared") return "غرفة مشتركة";
