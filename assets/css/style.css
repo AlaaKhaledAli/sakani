@@ -14,6 +14,9 @@ body {
 }
 /*Navbar*/
 .navbar {
+    position: sticky ;
+    top: 0;
+    z-index: 1000;
     font-family: 'Cairo', sans-serif;
 }
 .nav-link {
@@ -23,6 +26,12 @@ body {
 .nav-link:hover {
     background-color: #f3f4f6;
     color: #3b82f6 !important;
+}
+.active-link{
+    color:#3b82f6 !important;
+    background:#eff6ff !important;
+    border-radius:8px in !important;
+    font-weight:500 !important;
 }
 .nav-custom {
     color: #8c8c8c;

@@ -8,9 +8,6 @@ const pass = 'KQ9!$Z@7x2MP#L';
 console.log(button);
 
 button.addEventListener('click', function (e) {
-    console.log(Email.value);
-    console.log(password.value);
-
     if (Email.value === Gmail && password.value === pass) {
         window.location.href = "addpost.html";
         alert('Login Successful');
