@@ -119,7 +119,9 @@ function editData(i) {
   collapse.classList.add('show');
   // navigate to top
   window.scrollTo({ top: 0, behavior: 'smooth' });
-  submit.onclick = function () {
+  submit.onclick = function (e) {
+    e.preventDefault()
+    if (!isFormValid()) return;
     updateDataLS(i);
     clearForm();
     submit.innerText = 'إضافة';
